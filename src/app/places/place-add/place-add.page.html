@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button defaultHref="/places"></ion-back-button>
+    </ion-button>
+    <ion-title>Add A New Place</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <!--Fijarse que sin el atributo name de la etiqueta Ion-input, no funcionaria correctamente el banana In box-->
+          <ion-input type="text" placeholder="Escribe un titulo" [(ngModel)]="title" name="title"></ion-input>
+          <ion-input type="text" placeholder="http://imagewebsite.com" [(ngModel)]="imageURL" name="imageURL"></ion-input>
+          <ion-button color="primary" (click)="saveNewPlace()">Save</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
